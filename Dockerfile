@@ -6,6 +6,8 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Update the System and Install Essential Apps
 RUN  \
+  apt-get -y update && \
+  apt-get -y upgrade && \
   apt-get -y install unzip git wget nano software-properties-common  && \
   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886 && \
   add-apt-repository ppa:webupd8team/java && \
